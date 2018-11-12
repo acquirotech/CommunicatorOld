@@ -47,7 +47,7 @@ public class RechargeApis {
 			BufferedReader dataStreamFromUrl = new BufferedReader(
 					new InputStreamReader(httpConnection.getInputStream()));
 			String dataFromUrl = "", dataBuffer = "";
-			while ((dat4aBuffer = dataStreamFromUrl.readLine()) != null) {
+			while ((dataBuffer = dataStreamFromUrl.readLine()) != null) {
 				dataFromUrl += dataBuffer;
 			}			
 			dataStreamFromUrl.close();
