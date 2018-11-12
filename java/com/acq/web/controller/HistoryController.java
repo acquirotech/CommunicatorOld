@@ -68,7 +68,6 @@ public class HistoryController {
 			if (serviceDto.getStatus() == EnumStatusConstant.OK.getId()) {
 				ServiceDto<HashMap<String, HashMap<String, String>>> daoResponse = historyHanler
 						.transactionHistry(model);
-				System.out.println("response from transaction history version1 controller");
 				if (daoResponse.getStatus() == EnumStatusConstant.OK.getId()){
 					response.setStatus(daoResponse.getStatus());
 					response.setMessage(daoResponse.getMessage());
