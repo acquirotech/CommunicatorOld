@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.AcqWalletQrCodeEntity" table="acq_rewards_qrcode" catalog="acquiro_ver1">    	  
+    	<id name="qrCode" type="string">
+            <column name="QRCODE" unique = "true"/>
+              <generator class="identity" />
+        </id>
+        <property name="mid" type="string">
+            <column name="MID" />
+        </property>
+        <property name="mobileNo" type="string">
+            <column name="MOBILENO" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" />
+        </property>
+        <property name="dateTime" type="java.sql.Timestamp">
+            <column name="DATETIME" />
+        </property>
+         <property name="acquirer" type="string">
+            <column name="ACQUIRER" />
+        </property>
+    </class>
+</hibernate-mapping>

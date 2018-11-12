@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.AcqDeviceKey" table="acq_terminalkeysummary" catalog="acquiro_ver1">    	  
+    	<id name="id" type="string">
+            <column name="ID" />    
+            <generator class="identity" />
+        </id>
+        <property name="loginId" type="string">
+            <column name="LOGINID" length="20" />
+        </property>   
+         <property name="deviceKey" type="string">
+            <column name="DEVICEKEY"/>
+        </property>     
+         <property name="dateTime" type="string">
+            <column name="DATETIME"/>
+        </property>        
+    </class>
+</hibernate-mapping>

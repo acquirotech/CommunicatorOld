@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.acq.users.entity.AcqTransactionListEntity" table="acq_transaction_summary" catalog="acquiro_ver1">    	  
+    	<id name="transactionId" type="string">
+            <column name="ID" />
+        </id>  
+        <property name="sessionId" type="string">
+            <column name="USERID"/>
+        </property>
+        <property name="amount" type="string">
+            <column name="AMOUNT"/>
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS"/>
+        </property>
+        <property name="mid" type="string">
+            <column name="MERCHANTID"/>
+        </property>
+        <property name="acquirer" type="string">
+            <column name="AQUIRER_CODE"/>
+        </property>
+    </class>
+    
+    
+</hibernate-mapping>

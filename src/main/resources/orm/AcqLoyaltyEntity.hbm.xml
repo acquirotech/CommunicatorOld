@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+     <class name="com.acq.users.entity.AcqLoyaltyEntity" table="acq_rewards" catalog="acquiro_ver1">    	  
+    	<id name="id" type="string">
+            <column name="ID" />          
+        </id>
+        <property name="mid" type="string">
+            <column name="MID" />
+        </property>
+        <property name="loyaltyType" type="string">
+            <column name="LOYALTYTYPE" length="10" />
+        </property>
+        <property name="lastUpdatedOn" type="string">
+            <column name="LASTUPDATEDON" />
+        </property>
+    </class>
+    
+    <class name="com.acq.users.entity.AcqLoyaltyPointsEntity" table="acq_rewards_points" catalog="acquiro_ver1">    	  
+    	<id name="id" type="string">
+            <column name="ID" />
+        </id>
+        <property name="loyaltyId" type="string">
+            <column name="LOYALTYID" length="20" />
+        </property>
+        <property name="amount" type="string">
+            <column name="AMOUNT" />
+        </property>
+        <property name="noOfPoints" type="string">
+            <column name="NOOFPOINTS" />
+        </property>
+   		<property name="minAmountForPoints" type="string">
+            <column name="MIN_AMOUNT_FORPOINTS" />
+        </property> 
+        <property name="maxAmountForPoints" type="string">
+            <column name="MAX_AMOUNT_FORPOINTS" />
+        </property> 
+        <property name="minUsePoints" type="string">
+            <column name="MIN_USEPOINTS" />
+        </property>
+        <property name="maxUsePoints" type="string">
+            <column name="MAX_USEPOINTS" />
+        </property>
+  		<property name="maxPointContains" type="string">
+            <column name="MAX_POINTS_CONTAINS" />
+        </property>
+        <property name="validityPoints" type="string">
+            <column name="VALIDITY_POINTS" />
+        </property>
+         <property name="pointsPerVisit" type="string">
+            <column name="POINTS_PERVISIT" />
+        </property>
+        <property name="lastUpdateOn" type="string">
+            <column name="LAST_UPDATEDON" />
+        </property>
+    </class>
+    <class name="com.acq.users.entity.AcqLoyaltyCashbackEntity" table="acq_rewards_cashback" catalog="acquiro_ver1">    	  
+    	<id name="id" type="string">
+            <column name="ID" />            
+        </id>  
+          <property name="loyaltyId" type="string">
+            <column name="LOYALTYID" />
+        </property>
+        <property name="type" type="string">
+            <column name="CASHBACK_TYPE" length="11" />
+        </property>
+        <property name="cashBackAmount" type="string">
+            <column name="CASHBACK_AMOUNT" />
+        </property>
+        <property name="minAmountCashBack" type="string">
+            <column name="MIN_AMT_CASHBACK" />
+        </property>
+   		<property name="maxAmountCashBack" type="string">
+            <column name="MAX_AMT_CASHBACK" />
+        </property> 
+        <property name="lastUpdatedOn" type="string">
+            <column name="LAST_UPDATEDON" />
+        </property> 
+    </class>
+    
+    <class name="com.acq.users.entity.AcqLoyaltyGiftEntity" table="acq_rewards_gifts" catalog="acquiro_ver1">    	  
+    	<id name="id" type="string">
+            <column name="ID" />
+        </id>  
+         <property name="loyaltyId" type="string">
+            <column name="LOYALTYID" />
+        </property>
+        <property name="giftName1" type="string">
+            <column name="GIFT_NAME1" length="60" />
+        </property>
+         <property name="giftName2" type="string">
+            <column name="GIFT_NAME2" length="60" />
+        </property>
+         <property name="giftName3" type="string">
+            <column name="GIFT_NAME3" length="60" />
+        </property>
+        <property name="giftAmount" type="string">
+            <column name="GIFT_AMOUNT" />
+        </property>
+        <property name="txnAmount" type="string">
+            <column name="TXNAMOUNT" />
+        </property>
+   		<property name="lastUpdateOn" type="string">
+            <column name="LAST_UPDATEDON" />
+        </property>
+    </class>
+    
+</hibernate-mapping>
