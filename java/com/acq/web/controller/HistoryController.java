@@ -43,8 +43,7 @@ public class HistoryController {
 	
 	@RequestMapping(value = "transactionhistory/version1", method = RequestMethod.POST)
 	public @ResponseBody
-	ResponseInf<Object> txhistry(@ModelAttribute AcqTransactionHistryModel model,
-			HttpServletRequest request) {
+	ResponseInf<Object> txhistry(@ModelAttribute AcqTransactionHistryModel model,HttpServletRequest request) {
 		ValidatorFactory vFactory = Validation.buildDefaultValidatorFactory();
 		Validator validator = vFactory.getValidator();
 		Set<ConstraintViolation<AcqTransactionHistryModel>> inputErrorSet = validator
