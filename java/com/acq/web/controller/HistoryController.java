@@ -45,8 +45,6 @@ public class HistoryController {
 	public @ResponseBody
 	ResponseInf<Object> txhistry(@ModelAttribute AcqTransactionHistryModel model,
 			HttpServletRequest request) {
-		logger.info("request landing in transaction history");
-		System.out.println("request landing in transaction history version1 controller");
 		ValidatorFactory vFactory = Validation.buildDefaultValidatorFactory();
 		Validator validator = vFactory.getValidator();
 		Set<ConstraintViolation<AcqTransactionHistryModel>> inputErrorSet = validator
